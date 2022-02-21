@@ -62,7 +62,19 @@ export default class DoubleLinkedList {
   /**
    * Remove a node from the beginning of the list.
    */
-  shift() {}
+  shift() {
+    // always check if dll is empty first
+    if (this.size == 0 || !this.head) {
+      return; // there is nothing to shift
+    } else if (this.size == 1) {
+      this.head = null;
+      this.tail == null;
+    } else {
+      // if there's more than one node in dll
+      this.head.prev = null;
+      this.head.next = this.head;
+    }
+  }
 
   /**
    * Add a node to the head of the linked list.
