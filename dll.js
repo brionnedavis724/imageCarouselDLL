@@ -42,7 +42,21 @@ export default class DoubleLinkedList {
    * Remove an item from the end of the linked list.
    */
   pop() {
-    
+    if (!this.head) {
+      return; // if there is no head there is nothing to return
+    } else if (this.size == 1) {
+      // when calling pop to a dll of 1, head/tail is removed (null)
+      // dll is now empty
+      this.head = null;
+      this.tail = null;
+    } else {
+      // the previous image becomes the new tail
+      this.tail = this.tail.prev;
+      // there is no (null) images to come after the new tail
+      this.tail.next = null;
+    }
+    // decrement the length of dll
+    this.length--;
   }
 
   /**
@@ -97,6 +111,8 @@ export default class DoubleLinkedList {
         counter++;
       }
       if (index == counter) {
+        // this SWITCHES the image at index but does NOT add it
+        // original image at this index will be removed
         current.value = val;
       }
       // this.length++;

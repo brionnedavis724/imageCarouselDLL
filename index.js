@@ -66,11 +66,14 @@ prev.addEventListener('click', function () {
   }
 });
 
-// console.log(list.getNodeAtIndex(3));
-// list.insertAtIndex(
-//   1,
-//   'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.tKVNq9iCO1QIGLmBGjQ3WgHaEK%26pid%3DApi&f=1'
-// );
+console.log(list.getNodeAtIndex(3));
+list.insertAtIndex(
+  1,
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.tKVNq9iCO1QIGLmBGjQ3WgHaEK%26pid%3DApi&f=1'
+);
 // console.log(list);
 list.removeAtIndex(4);
-console.log(list);
+list.pop();
+list.push(
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.30fuPl3x9KvMB2ZYW0k7owHaEK%26pid%3DApi&f=1'
+);
