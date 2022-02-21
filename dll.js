@@ -41,7 +41,9 @@ export default class DoubleLinkedList {
   /**
    * Remove an item from the end of the linked list.
    */
-  pop() {}
+  pop() {
+    
+  }
 
   /**
    * Remove a node from the beginning of the list.
@@ -84,7 +86,7 @@ export default class DoubleLinkedList {
    */
   insertAtIndex(index, val) {
     // what to do when index is < 0 or >= length of dll?
-    if (index < 0 || index >= this.length - 1) {
+    if (index < 0 || index >= this.length) {
       return null;
     } else {
       let counter = 0;
@@ -106,7 +108,24 @@ export default class DoubleLinkedList {
    * Remove a node at a specific index.
    */
 
-  removeAtIndex(index) {}
+  removeAtIndex(index, val) {
+    if (index < 0 || index >= this.length) {
+      return null;
+    } else {
+      let counter = 0;
+      let current = this.head;
+
+      while (counter < index) {
+        current = current.next;
+        counter++;
+      }
+
+      if (index == counter) {
+        current.value = ' ';
+      }
+      return current;
+    }
+  }
 }
 
 // Export the Node and DLL class
