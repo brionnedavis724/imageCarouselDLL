@@ -78,3 +78,6 @@ list.push(
   'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.30fuPl3x9KvMB2ZYW0k7owHaEK%26pid%3DApi&f=1'
 );
 list.shift();
+list.unshift(
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tom-archer.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fdubai-skyline-cityscape-5.jpg&f=1&nofb=1'
+);

@@ -84,17 +84,24 @@ export default class DoubleLinkedList {
    * Add a node to the head of the linked list.
    */
   unshift(value) {
+    const newNode = new DoubleLinkedList(value);
+    console.log('unshift');
     // always check if dll is empty
     if (!this.head) {
-      return; // there is nothing to unshift in an empty dll
-    } else if (this.size == 1) {
-      this.head = node;
-      this.tail = node;
+      // if there is no head, assign the new node as the head & tail
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-      this.head.prev = node;
-      node.prev = this.head;
-      this.head = node;
+      // before the current head, new node is placed
+      this.head.prev = newNode;
+      // connect the new node to the front of current head
+      newNode.next = this.head;
+      // new node now becomes the head
+      this.head = newNode;
     }
+    // unshift adds to the lenth of dll by 1
+    this.length++;
+    return newNode;
   }
 
   /**
