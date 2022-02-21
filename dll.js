@@ -84,7 +84,8 @@ export default class DoubleLinkedList {
    * Add a node to the head of the linked list.
    */
   unshift(value) {
-    const newNode = new DoubleLinkedList(value);
+    // why create a new instance of Node and not DoubleLinkedList?
+    const newNode = new Node(value);
     console.log('unshift');
     // always check if dll is empty
     if (!this.head) {
@@ -101,7 +102,6 @@ export default class DoubleLinkedList {
     }
     // unshift adds to the lenth of dll by 1
     this.length++;
-    return newNode;
   }
 
   /**

@@ -79,5 +79,5 @@ list.push(
 );
 list.shift();
 list.unshift(
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tom-archer.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fdubai-skyline-cityscape-5.jpg&f=1&nofb=1'
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.LZ75nsQ1Z17NKDSdFcc-nwHaE7%26pid%3DApi&f=1'
 );
