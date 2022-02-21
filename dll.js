@@ -83,7 +83,19 @@ export default class DoubleLinkedList {
   /**
    * Add a node to the head of the linked list.
    */
-  unshift(value) {}
+  unshift(value) {
+    // always check if dll is empty
+    if (!this.head) {
+      return; // there is nothing to unshift in an empty dll
+    } else if (this.size == 1) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      this.head.prev = node;
+      node.prev = this.head;
+      this.head = node;
+    }
+  }
 
   /**
    * Get a Node at a specific index
