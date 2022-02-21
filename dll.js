@@ -64,16 +64,20 @@ export default class DoubleLinkedList {
    */
   shift() {
     // always check if dll is empty first
-    if (this.size == 0 || !this.head) {
+    if (!this.head) {
       return; // there is nothing to shift
     } else if (this.size == 1) {
       this.head = null;
       this.tail == null;
     } else {
       // if there's more than one node in dll
+      // the current head should be the node that comes next
+      this.head = this.head.next;
+      // the new head has no (null) nodes before it
       this.head.prev = null;
-      this.head.next = this.head;
     }
+    // decrement the size of dll
+    this.length--;
   }
 
   /**

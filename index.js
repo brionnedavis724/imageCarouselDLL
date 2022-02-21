@@ -77,4 +77,4 @@ list.pop();
 list.push(
   'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.30fuPl3x9KvMB2ZYW0k7owHaEK%26pid%3DApi&f=1'
 );
-list.unshift();
+list.shift();
